@@ -1,5 +1,8 @@
 <template>
     <div id="card">
+        <div class="layout-element">
+          <div class="circle left-circle"></div>
+        </div>
         <div class="quantity">
           Admit One
         </div>
@@ -19,6 +22,9 @@
           <div class="address">
             {{ tripCard.address }} - {{ tripCard.state }} - {{ tripCard.country }}
           </div>
+        </div>
+        <div class="layout-element">
+          <div class="circle right-circle"></div>
         </div>
       </div>
 </template>
@@ -45,17 +51,17 @@
 
 <style lang="scss">
 #trip-information {
-    background: linear-gradient(180deg, var(--dark-blue) 320px, var(--white) 320px);
+    background: linear-gradient(180deg, var(--dark-blue) 332px, var(--white) 332px);
     color: var(--white);
     margin-top: -1px;
     padding-bottom: 130px;
-    h1{
+    h1 {
       margin-bottom: 0;
     }
     p {
       font-size: var(--font-18);
     }
-    #card{
+    #card {
       width: 100%;
       display:flex;
       flex-direction: row;
@@ -65,7 +71,29 @@
       color: var(--green);
       margin-top: 50px;
       height: 230px;
-        .quantity{
+      .layout-element {
+        width: 5%;
+        height: 100%;
+        display:flex;
+        align-items: center;
+        .circle {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          -moz-border-radius: 50%;
+          -webkit-border-radius: 50%;
+          position: absolute;
+          align-content: center;
+        }
+        .left-circle {
+          background: linear-gradient(180deg, var(--dark-blue) 50%, var(--white) 50%);
+          left: 10px;
+        }
+        .right-circle {
+          background: linear-gradient(180deg, var(--dark-blue) 50%, var(--white) 50%);
+        }
+      }
+      .quantity{
         border-left: dashed 1px var(--green);
         width: 10%;
         text-align:center;
@@ -73,18 +101,6 @@
         transform: rotate(180deg);
         padding-right: 20px;
         font-size: var(--font-14);
-        &::before{
-          content: '';
-          width: 32px;
-          height: 32px;
-          border-radius: 50%;
-          -moz-border-radius: 50%;
-          -webkit-border-radius: 50%;
-          background: linear-gradient(0deg, var(--dark-blue) 50%, var(--white) 50%);
-          position: absolute;
-          left: 38px;
-          top: 105px;
-        }
       }
       .destination {
         width: 70%;
@@ -92,18 +108,6 @@
         display: flex;
         flex-direction: column;
         font-size: var(--font-14);
-        &::before{
-          content: '';
-          width: 32px;
-          height: 32px;
-          border-radius: 50%;
-          -moz-border-radius: 50%;
-          -webkit-border-radius: 50%;
-          background: linear-gradient(180deg, var(--dark-blue) 50%, var(--white) 50%);
-          position: absolute;
-          right: 15px;
-          bottom: 206px;
-        }
         .local {
           font-size: var(--font-32);
           font-weight: var(--font-700);
