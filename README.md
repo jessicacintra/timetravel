@@ -1,7 +1,9 @@
 # Timetravel Project
 
 > This project was development on Vue.js.
+
 > This is a SPA application.
+
 > The CWV metrics average are ~94.
 
 ## Build Setup
