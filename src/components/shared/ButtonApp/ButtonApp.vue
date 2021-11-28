@@ -1,19 +1,43 @@
 <template>
-    <a :href='url' :class='className'>{{ text }}</a>
+    <router-link :to='url' class="button" :class="includingStyle">{{ text }}</router-link>
 </template>
 
 <script>
     export default {
-        props: ['url', 'className', 'text']
+        props: {
+            url: {
+                required: true,
+                type: String,
+            },
+            className: {
+                type: String,
+            },
+            text: {
+                required: true,
+                type: String,
+            }
+        },
+
+        computed: {
+            includingStyle(){
+                if(this.className == 'blue') return 'button-blue';
+                if(this.className == 'white') return 'button-white';
+            }
+        }
     }
 </script>
 
 <style lang="scss">
-    .buttons{
+    .button{
         padding: 8px 16px;
         border-radius: 4px;
         text-decoration: none;
         font-size: var(--font-16);
+    }
+    .large{
+        width: auto;
+        display: block;
+        text-align: center;
     }
     .button-white{
         background: var(--white);

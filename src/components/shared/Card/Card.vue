@@ -83,7 +83,7 @@
           background: linear-gradient(0deg, var(--dark-blue) 50%, var(--white) 50%);
           position: absolute;
           left: 38px;
-          top: 104px;
+          top: 105px;
         }
       }
       .destination {
