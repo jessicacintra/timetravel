@@ -1,14 +1,12 @@
 <template>
     <div>
         <section id="home" class="container">
-            <div id="welcome-message">
-                <h1>
+            <h1>
                 Inbox
-                </h1>
-                <p>
-                    Check your messages below
-                </p>
-            </div>
+            </h1>
+            <p>
+                Check your messages below
+            </p>
         </section>
     </div>
 </template>

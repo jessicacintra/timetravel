@@ -1,14 +1,14 @@
 <template>
-    <header class="container">
-      <div class="logo">
+    <header class="container header">
+      <div class="header__logo">
         <ImageApp :url="logo.url" :title="logo.title" :alt="logo.alt" :width="logo.width" :height="logo.height" />
       </div>
-      <div class="user-actions">
+      <div class="header__user-actions">
         <ul>
           <li v-for="navigationItem of navigationItems">
-            <a href="#">
+            <router-link :to="navigationItem.link">
               <ImageApp :url="navigationItem.url" :title="navigationItem.title" :alt="navigationItem.alt" :width="navigationItem.width" :height="navigationItem.height" />
-            </a>
+            </router-link>
           </li>
         </ul>
       </div>
@@ -30,18 +30,20 @@ import ImageApp from '../ImageApp/ImageApp.vue';
                     height: '49'
                 },
                 navigationItems: [
-                    {
+                  {
                     url: 'https://d-makers.com.br/freelas/nuvemshop-teste/icons/user.svg',
                     title: 'User',
                     width: '16.24',
-                    height: '23.25'
-                    },
-                    {
+                    height: '23.25',
+                    link: '/User'
+                  },
+                  {
                     url: 'https://d-makers.com.br/freelas/nuvemshop-teste/icons/config.svg',
                     title: 'Configuration',
                     width: '24',
-                    height: '22.79'
-                    }
+                    height: '22.79',
+                    link: 'Configuration'
+                  }
                 ],
             }
         }
@@ -49,15 +51,15 @@ import ImageApp from '../ImageApp/ImageApp.vue';
 </script>
 
 <style lang="scss">
-  header {
+  .header {
     background-color: var(--dark-blue);
     display:flex;
     flex-direction:row;
     padding-top:30px !important;
-    .logo {
+    &__logo {
       width:60%;
     }
-    .user-actions {
+    &__user-actions {
       width:40%;
       ul {
         height: 100%;

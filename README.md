@@ -18,8 +18,7 @@
 # run this code to install all project dependencies
 npm install
 
-# run this code to open teh application
-# serve with hot reload at 
+# run this code to open the application with hotreloaded
 npm run dev
 
-# the application is going to be served at localhost:8080, in case the application doesn't open automatically
+# the application is going to be served at localhost:8080, just in case the application doesn't open automatically

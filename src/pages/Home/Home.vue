@@ -1,12 +1,10 @@
 <template>
     <div>
         <section id="home" class="container">
-            <div id="welcome-message">
-                <h1>
-                    {{ home.text }} {{ home.name }}!!
-                </h1>
-                <ButtonApp :url="home.tripButton.url" className="blue" class="large" :text="home.tripButton.text" />
-            </div>
+          <h1>
+              {{ home.text }} {{ home.name }}!!
+          </h1>
+          <ButtonApp :url="home.tripButton.url" className="blue" class="large" :text="home.tripButton.text" />
         </section>
     </div>
 </template>

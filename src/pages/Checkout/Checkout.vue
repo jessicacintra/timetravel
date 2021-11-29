@@ -1,15 +1,13 @@
 <template>
     <div>
         <section id="checkout" class="container">
-            <div id="welcome-message">
-                <h1>
-                    {{ checkout.text }}!!
-                </h1>
-                <p>
-                    {{ checkout.confirmedText }}
-                </p>
-                <ButtonApp :url="checkout.homeButton.url" className="blue" class="large" :text="checkout.homeButton.text" />
-            </div>
+          <h1>
+              {{ checkout.text }}!!
+          </h1>
+          <p>
+              {{ checkout.confirmedText }}
+          </p>
+          <ButtonApp :url="checkout.homeButton.url" className="blue" class="large" :text="checkout.homeButton.text" />
         </section>
     </div>
 </template>

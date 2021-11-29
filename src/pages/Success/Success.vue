@@ -57,6 +57,18 @@ import ButtonApp from '../../components/shared/ButtonApp/ButtonApp.vue';
 </script>
 
 <style lang="scss">
+#trip-information {
+    background: linear-gradient(180deg, var(--dark-blue) 332px, var(--white) 332px);
+    color: var(--white);
+    margin-top: -1px;
+    padding-bottom: 130px;
+    h1 {
+      margin-bottom: 0;
+    }
+    p {
+      font-size: var(--font-18);
+    }
+  }
 #terms-and-conditions{
   padding: 15px 0;
   font-size: var(--font-16);
