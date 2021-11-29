@@ -6,11 +6,20 @@
 
 > The CWV metrics average are ~94.
 
-## Build Setup
+## How to run Timetravel Project
 
 ``` bash
-# install dependencies
+# clone this project on github: https://github.com/jessicacintra/timetravel
+
+# enter to timetravel folder
+
+# open the terminal on VScode or similars
+
+# run this code to install all project dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# run this code to open teh application
+# serve with hot reload at 
 npm run dev
+
+# the application is going to be served at localhost:8080, in case the application doesn't open automatically
